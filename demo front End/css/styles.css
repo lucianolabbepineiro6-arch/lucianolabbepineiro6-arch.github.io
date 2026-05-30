@@ -1,0 +1,396 @@
+/* GameBoard - Tienda E-commerce Minimalist */
+
+:root {
+    --primary: #000000;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --border: #e9ecef;
+    --success: #198754;
+}
+
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #212529;
+}
+
+/* Header & Navigation */
+header {
+    top: 40px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn-outline-secondary {
+    border-left: none;
+}
+
+.badge {
+    font-size: 0.65rem;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Carrito */
+.modal-content {
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    flex-wrap: wrap;
+}
+
+#resumen-carrito {
+    width: 100%;
+}
+
+#carrito-vacio-resumen {
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* Category Cards */
+.category-card {
+    cursor: pointer;
+    background: white !important;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.category-card i {
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover i {
+    transform: scale(1.15);
+}
+
+/* Productos Cards */
+.product-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 240px;
+    object-fit: cover;
+    overflow: hidden;
+    background: var(--light);
+}
+
+.product-image img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-body {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-description {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-rating {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: white;
+    color: #000;
+}
+
+/* Filtros Sidebar */
+.card {
+    border: 1px solid var(--border) !important;
+    box-shadow: none !important;
+}
+
+.form-range {
+    height: 4px;
+}
+
+.form-check-input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
+.form-check-input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.form-select {
+    border: 1px solid var(--border);
+}
+
+/* Carrito Table */
+.table {
+    font-size: 0.95rem;
+}
+
+.table img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.input-group-sm .form-control {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+.input-group-sm .btn {
+    padding: 0.4rem 0.5rem;
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-outline-dark {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+}
+
+footer a:hover {
+    color: #fff !important;
+}
+
+footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.2s ease;
+}
+
+footer a.text-white-50:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+footer h6 {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        top: 0 !important;
+    }
+
+    .col-lg-3,
+    .col-lg-6,
+    .col-lg-8,
+    .col-lg-9 {
+        width: 100% !important;
+    }
+
+    .product-card {
+        margin-bottom: 1rem;
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .d-flex.gap-3 {
+        gap: 1rem !important;
+    }
+
+    .modal-dialog {
+        margin: auto !important;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Toast/Notificaciones */
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+/* Helpers */
+.fw-500 {
+    font-weight: 500;
+}
+
+.text-dark {
+    color: #000 !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+

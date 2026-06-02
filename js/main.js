@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnComprar = document.getElementById('btn-comprar');
     if (btnComprar) {
         btnComprar.addEventListener('click', () => {
-            const COSTO_ENVIO = 10000;
+            const COSTO_ENVIO = 4990;
             const ENVIO_GRATIS_DESDE = 100000;
             const subtotal = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
             const envio = subtotal >= ENVIO_GRATIS_DESDE ? 0 : COSTO_ENVIO;

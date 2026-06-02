@@ -1,5 +1,4 @@
 // Base de datos de juegos de mesa
-// IA: Copilot ayudó a estructurar productos como objetos ({id, nombre, precio, descripcion, imagen, rating, stock}) y a usar arrays nativos para el estado.
 const juegos = [
     {
         id: 1,
